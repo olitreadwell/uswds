@@ -202,3 +202,24 @@ tests.forEach(({ name, selector: containerSelector }) => {
     });
   });
 });
+
+describe("Modal markup missing required attributes", () => {
+  const { body } = document;
+
+  afterEach(() => {
+    body.innerHTML = "";
+  });
+
+  it("throws a correctly spelled error when aria-describedby is missing", () => {
+    body.innerHTML = `
+      <div class="usa-modal" id="modal-no-describedby" aria-labelledby="modal-heading">
+        <div class="usa-modal__content"></div>
+      </div>
+    `;
+
+    assert.throws(
+      () => modal.on(body),
+      /modal-no-describedby is missing aria-describedby attribute/,
+    );
+  });
+});
