@@ -1,5 +1,5 @@
 # uswds/uswds context
-> refreshed 2026-09-04 | upstream default: develop @ 9173c1107
+> refreshed 2026-09-05 | upstream default: develop @ eed8a5edf (context branch created 2026-09-04 @ 9173c1107)
 
 ## Identity & policies
 - upstream: uswds/uswds, default branch `develop`, primary language JS/TS/Sass/HTML (USWDS design system). English-first: yes.
@@ -23,6 +23,7 @@
 - Modal `aria-describedby` typo: upstream issue #5652 still open, but fix already proposed upstream by PR #6755 (open, head `fix/modal-aria-describedby-typo`) — DO NOT re-pick.
 
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
+- `2026-09-05` loop retry (task: make ONE contribution to uswds/uswds) — outcome: **blocked-needs-signing** — re-verified live: CONTRIBUTING "Setting up verified commits" + `.github/workflows/verify-commit-signatures.yml` (pull_request_target) still require verified commits on every PR; repo responsive (daily merges). Environment still has NO signing capability (no `gpg`/`gpg2`, no `ssh-add`, no `~/.gnupg`, no `~/.ssh`, no `user.signingkey` in git config). config `known_blockers.signed_commits` binds skip + `blocked-needs-signing`; automation must NOT register a signing key to Oli's account. No PR opened. Unlocks only if Oli registers an SSH/GPG signing key on his GitHub account.
 - `2026-09-04` self-found trivial fixes (calender->calendar in usa-date-picker/src/index.js:1755; broken `http://CHANGELOG.md` link in GOVERNANCE.md:55) — outcome: **blocked-needs-signing** — repo requires verified commits; automation has no signing key and must not register one to Oli's account. No PR opened. Unlocks if Oli registers an SSH/GPG signing key on his GitHub account.
 
 ## Mined gaps (discovered, not yet attempted)
